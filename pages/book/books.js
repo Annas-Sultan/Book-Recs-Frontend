@@ -20,7 +20,8 @@ export async function getStaticProps() {
   return {
     props: {
       books: data.Books
-    }
+    },
+    revalidate: 1
   };
 }
 
