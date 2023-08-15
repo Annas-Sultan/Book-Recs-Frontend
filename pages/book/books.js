@@ -22,7 +22,7 @@ export async function getStaticProps() {
     props: {
       books: data.Books
     },
-    revalidate: 10
+    revalidate: 5
   };
 }
 
