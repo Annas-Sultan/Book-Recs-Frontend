@@ -4,6 +4,7 @@ import BookCard from '../../components/Book';
 
 export async function getStaticProps() {
   const { data, error } = await client.query({
+    fetchPolicy: 'cache-and-network',
     query: gql`
       query Books {
         Books {
@@ -21,7 +22,7 @@ export async function getStaticProps() {
     props: {
       books: data.Books
     },
-    revalidate: 1
+    revalidate: 10
   };
 }
 
