@@ -1,8 +1,10 @@
-#### Recommend me a Book 📖 🔖
+# Recommend Me A Book 📖 🔖
 
-A small project I built so that I can learn more about Next.js's different rendering options (SSG/ISSR/CSR)
+A small project I built so that I can learn more about Next.js's different rendering strategies (SSG/ISR/CSR)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[Live Demo](https://book-recs-frontend-6v88.vercel.app/)
+
+Check-out the accompanying [backend project](https://github.com/Annas-Sultan/Book-Recs-Backend)
 
 ## Features
 - Recommend me a book by submitting the recommendation form
@@ -13,6 +15,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Next.js
 - TailwindCSS
 - Apollo Client
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
