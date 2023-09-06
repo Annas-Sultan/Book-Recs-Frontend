@@ -1,12 +1,14 @@
-import BookCard from '../../components/Book';
-import { getBookIDs } from '../../hooks/getBookIDs';
 import { gql } from '@apollo/client';
 import client from '../../apollo-client';
+import { BookCardSimple } from '../../components/Book';
+import { getBookIDs } from '../../hooks';
+import { CommentSection } from '../../components/Comments';
 
 export default function Book({ book }) {
   return (
-    <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-      <BookCard {...book} />
+    <div className="m-4">
+      <BookCardSimple {...book} />
+      <CommentSection {...book} />
     </div>
   );
 }
@@ -38,8 +40,14 @@ const BOOK = gql`
   }
 `;
 export async function getStaticProps({ params }) {
-  const { data, error } = await client.query({ query: BOOK, variables: { id: params.book } });
-  if (error) console.log('error fetching book');
+  const { data, error } = await client.query({
+    query: BOOK,
+    variables: { id: params.book }
+  });
+  if (error) {
+    console.log('error fetching book');
+    throw new Error(error.message);
+  }
   return {
     props: {
       book: data.Book

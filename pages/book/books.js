@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 import client from '../../apollo-client';
-import BookCard from '../../components/Book';
+import { BookCard } from '../../components/Book';
 
 export async function getStaticProps() {
   const { data, error } = await client.query({
