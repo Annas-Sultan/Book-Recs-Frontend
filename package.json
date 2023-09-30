@@ -16,15 +16,15 @@
     "@heroicons/react": "^2.0.18",
     "@vercel/analytics": "^1.0.2",
     "graphql": "^16.6.0",
-    "next": "12.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "^13.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.14",
     "eslint": "8.21.0",
-    "eslint-config-next": "12.2.4",
+    "eslint-config-next": "^13.5.3",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "postcss": "^8.4.23",

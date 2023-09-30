@@ -34,15 +34,15 @@ export default function Header() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <Link key={item.name} href={item.href} passHref>
-                        <a
-                          className={classNames(
-                            'text-white',
-                            'hover:text-grey-300 hover:bg-gray-700',
-                            'rounded-md px-3 py-2 text-sm font-medium'
-                          )}>
-                          {item.name}
-                        </a>
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          'text-white',
+                          'hover:text-grey-300 hover:bg-gray-700',
+                          'rounded-md px-3 py-2 text-sm font-medium'
+                        )}>
+                        {item.name}
                       </Link>
                     ))}
                   </div>
