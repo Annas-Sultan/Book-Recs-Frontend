@@ -11,8 +11,8 @@ const BookCard = ({ id, book_name, author_name, note, date_added }) => (
     </div>
     <div className="flex justify-between">
       <p className="text-xs">{new Date(date_added).toDateString()}</p>
-      <Link href={`/book/${id}`}>
-        <a className="underline">More Info</a>
+      <Link href={`/book/${id}`} className="underline">
+        More Info
       </Link>
     </div>
   </div>

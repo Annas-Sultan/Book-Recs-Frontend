@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client';
+import { gql, useSuspenseQuery } from '@apollo/client';
 import CommentCard from './CommentCard';
 export const CommentQuery = gql`
   query Query($bookId: ID!) {
@@ -11,11 +11,10 @@ export const CommentQuery = gql`
   }
 `;
 const Comments = ({ id }) => {
-  const { data, loading, error } = useQuery(CommentQuery, { variables: { bookId: id } });
-  if (loading) return 'Loading Comments...';
-  if (error) return 'Error Fetching Comments';
+  const { data, error } = useSuspenseQuery(CommentQuery, { variables: { bookId: id } });
+  if (error) return <p>Error Fetching Comments</p>;
   if (data.Comments.length === 0)
-    return <div className="my-3">Start the discussion by posting a comment!</div>;
+    return <p className="my-3">Start the discussion by posting a comment!</p>;
   return (
     <>
       {data.Comments.map((comment) => (

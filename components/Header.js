@@ -1,10 +1,11 @@
+'use client';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
-  { name: 'All Books', href: '/book/books', current: false },
+  { name: 'All Books', href: '/books', current: false },
   { name: 'Recommend!', href: '/recommend', current: false }
 ];
 
@@ -34,15 +35,15 @@ export default function Header() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <Link key={item.name} href={item.href} passHref>
-                        <a
-                          className={classNames(
-                            'text-white',
-                            'hover:text-grey-300 hover:bg-gray-700',
-                            'rounded-md px-3 py-2 text-sm font-medium'
-                          )}>
-                          {item.name}
-                        </a>
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          'text-white',
+                          'hover:text-grey-300 hover:bg-gray-700',
+                          'rounded-md px-3 py-2 text-sm font-medium'
+                        )}>
+                        {item.name}
                       </Link>
                     ))}
                   </div>

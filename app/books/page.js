@@ -1,10 +1,13 @@
 import { gql } from '@apollo/client';
-import client from '../../apollo-client';
+import { getClient } from '../../apollo-server-client';
 import { BookCard } from '../../components/Book';
 
-export async function getStaticProps() {
-  const { data, error } = await client.query({
-    fetchPolicy: 'network-only',
+const getBooks = async () => {
+  const client = getClient();
+  const {
+    data: { Books: books },
+    error
+  } = await client.query({
     query: gql`
       query Books {
         Books {
@@ -17,16 +20,12 @@ export async function getStaticProps() {
       }
     `
   });
-  if (error) console.log('error');
-  return {
-    props: {
-      books: data.Books
-    },
-    revalidate: 5
-  };
-}
+  if (error) throw new Error(error.message);
+  return books;
+};
+export default async function Books() {
+  const books = await getBooks();
 
-export default function Books({ books }) {
   return (
     <div className="mx-auto max-w-2xl px-4 py-8 lg:max-w-7xl lg:px-8">
       <h2 className="w-2/5 rounded-lg border border-gray-800 bg-gray-400 p-2 text-2xl font-bold md:w-1/5">
