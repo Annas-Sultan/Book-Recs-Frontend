@@ -7,7 +7,7 @@ const Home = () => (
     </div>
     <ul className="flex flex-col gap-y-2 pt-8 text-base md:flex-row">
       <li className="rounded-lg border border-stone-400 bg-stone-400 p-2 underline md:p-4">
-        <Link href="/book/books">See Recommendations</Link>
+        <Link href="/books">See Recommendations</Link>
       </li>
       <li className="rounded-lg border border-stone-400 bg-stone-400 p-2 underline md:ml-4 md:p-4">
         <Link href="/recommend">Recommend Me A Book!</Link>

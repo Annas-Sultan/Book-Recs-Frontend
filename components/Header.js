@@ -1,10 +1,11 @@
+'use client';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
-  { name: 'All Books', href: '/book/books', current: false },
+  { name: 'All Books', href: '/books', current: false },
   { name: 'Recommend!', href: '/recommend', current: false }
 ];
 
