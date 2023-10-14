@@ -2,6 +2,8 @@ import { gql } from '@apollo/client';
 import { getClient } from '../../apollo-server-client';
 import { BookCard } from '../../components/Book';
 
+export const dynamic = 'force-dynamic';
+
 const getBooks = async () => {
   const client = getClient();
   const {
