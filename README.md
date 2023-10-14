@@ -9,7 +9,7 @@ Check-out the accompanying [backend project](https://github.com/Annas-Sultan/Boo
 ## Features
 - Recommend me a book by submitting the recommendation form
 - See what other people have recommended 
-- Comment section (WIP)
+- Comment section (Done! :tada:)
   
 ## Stack
 - Next.js
