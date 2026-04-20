@@ -2,7 +2,7 @@
 
 A small project I built so that I can learn more about Next.js's different rendering strategies (SSG/ISR/CSR)
 
-[Live Demo](https://book-recs-frontend-6v88.vercel.app/)
+[Live Demo](https://book-recs-frontend-production.up.railway.app/)
 
 Check-out the accompanying [backend project](https://github.com/Annas-Sultan/Book-Recs-Backend)
 
@@ -15,4 +15,4 @@ Check-out the accompanying [backend project](https://github.com/Annas-Sultan/Boo
 - Next.js
 - TailwindCSS
 - Apollo Client
-- Deployed on Vercel
+- Deployed to Railway
